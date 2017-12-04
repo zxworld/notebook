@@ -76,3 +76,9 @@
 ```
     docker cp /Users/zx/Documents/jpress.war 1cfcfed667ff:/usr/local/tomcat/webapps
 ```
+
+### 启动一个容器
+
+```
+	docker start <container name>
+```
