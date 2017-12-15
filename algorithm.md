@@ -3,6 +3,14 @@
 > 二分搜索
 
 ```
+思路: 
+	每次取数组的1/2的值来对比目标值.
+	有两个指针,初始化头指针在0,尾指针在数组长度上.
+	循环头指针小于等于尾指针.
+	取头指针加上二分之一尾指针减去头指针的值.对比值.
+	比目标值小:移动头指针到当前取的值的位置.再对比.
+	比目标值大:移动尾指针到当前取的值的位置.再对比.
+
 public static int rank(int key, int[] a) {
         int lo = 0;
         int hi = a.length - 1;
@@ -23,7 +31,7 @@ public static int rank(int key, int[] a) {
 > 单向链表反转
 
 ```
-数据结构
+// 数据结构
 class Node {
     private int  data;
     private Node next;
@@ -101,4 +109,50 @@ public class TestMain {
 
 
 }
+```
+
+> 选择排序
+
+```
+思路:
+	依次循环数组位置
+	每次循环找最小的那个值,进行当前位置的替换
+	
+public static Comparable[] sort(Comparable[] a) {
+        int N = a.length;
+        for (int i = 0; i < N; i++) {
+            int min = i;
+            for (int j = i + 1; j < N; j++) {
+                if (a[min].compareTo(a[j]) > 0) {
+                    Comparable tmp = a[min];
+                    a[min] = a[j];
+                    a[j] = tmp;
+                    min = j;
+                }
+            }
+        }
+        return a;
+    }
+``` 
+
+> 插入排序
+
+```
+int[] a = new int[5];
+a[0] = 12;
+a[1] = 45;
+a[2] = 108;
+a[3] = 1;
+a[4] = 3;
+for (int i = 1; i < a.length; i++) {
+   int insert = a[i];
+   int j = i - 1;
+   while (j >= 0 && insert < a[j]) {
+      a[j + 1] = a[j];
+      j--;
+   }
+   a[j + 1] = insert;
+}
+System.out.println(Arrays.toString(a));
+
 ```
