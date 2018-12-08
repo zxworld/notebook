@@ -4,6 +4,7 @@
 #### 关闭窗口 -- com+w
 #### 通过字符搜索 -- com+shift+f
 #### 本文搜索 -- com+f
+#### 全局查找（根据路径）-- com+shift+f
 #### 快速生成getter/setter -- com+n
 #### 移动选中代码 -- com+shift+上下
 #### 快速显示类中方法/属性 -- com+f12
