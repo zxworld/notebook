@@ -1,3 +1,5 @@
+## Linux安装方式
+
 #### 1、官网下载包
 
 ```
@@ -115,4 +117,29 @@
 > 关闭redis
 ```
     redis-cli shutdown
+```
+
+---
+
+## docker中安装
+
+#### docker设置加速镜像地址
+
+推荐使用阿里云加速
+https://cr.console.aliyun.com/cn-hangzhou/mirrors
+注册，登录后会有个自己的镜像地址，还有设置方式说明
+
+![加速地址](../pics/1546158156952.jpg)
+
+#### 1、拉取镜像
+
+```
+	官方镜像
+    docker pull redis
+```
+
+#### 2、解析到安装目录
+
+```
+    sudo tar -zxf redis-3.2.8.tar.gz
 ```

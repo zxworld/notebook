@@ -17,3 +17,21 @@ esc --> G
 ```
 ps -eo pid,lstart,etime | grep 31479
 ```
+
+> 运行jar包程序
+
+```
+nohup java -jar xxx.jar &
+```
+
+> 查询端口是否开放
+
+```
+more /etc/sysconfig/iptables
+```
+
+> 查询某个端口状态
+
+```
+netstat -ano |grep :8088
+```

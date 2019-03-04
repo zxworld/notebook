@@ -27,3 +27,10 @@ Generating project in Interactive mode
 ```
 mvn archetype:generate -DgroupId=com.cyf -DartifactId=cms -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeCatalog=internal
 ```
+
+### 排除jar包冲突、查看jar包结构
+
+```
+mvn dependency:tree -Dverbose -Dincludes=guava
+先dependency:tree 然后搜索jar包也可以
+```
